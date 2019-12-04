@@ -1,4 +1,5 @@
+# this is being used by infra, the repository is changed during runtime
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/gigster-athena-primary/stunnel', '.' ]
-images: [ 'gcr.io/gigster-athena-primary/stunnel:latest' ]
+  args: [ 'build', '-t', 'gcr.io/{{REPOSITORY}}/stunnel', '.' ]
+images: [ 'gcr.io/{{REPOSITORY}}/stunnel:latest' ]
