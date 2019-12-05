@@ -2,6 +2,6 @@
 
 set -e
 
-cat cloudbuild.yaml.example | sed s/{{REPOSITORY}}/${REPOSITORY}/ > cloudbuild.yaml
+cat cloudbuild.yaml.example | sed s/{{REPOSITORY}}/${PROJECT}/ > cloudbuild.yaml
 
-gcloud builds submit .
+gcloud builds submit . --project=${PROJECT}
